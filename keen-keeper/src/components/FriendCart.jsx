@@ -13,39 +13,7 @@ const FriendCart = async () => {
     const friends = await friendsPromise();
     console.log(friends);
 
-    /*
-    bio
-: 
-"Met during freshman year at BUET. She's a civil engineer now working on infrastructure projects in Sylhet. We used to pull all-nighters before exams and now catch up over biriyani whenever she's in town."
-days_since_contact
-: 
-19
-email
-: 
-"ayesha.rahman@gmail.com"
-goal
-: 
-14
-id
-: 
-1
-name
-: 
-"Ayesha Rahman"
-next_due_date
-: 
-"2026-04-10"
-picture
-: 
-"https://randomuser.me/api/portraits/women/44.jpg"
-status
-: 
-"overdue"
-tags
-: 
-(3) ['college', 'close friend', 'Dhaka']
-    */
-
+   
     return (
         <div className="bg-base-200">
             <div className="container mx-auto w-full px-4 md:px-0 mt-6 md:mt-10 md:w-[60%] py-6 md:py-10">
@@ -55,8 +23,8 @@ tags
                     {
                         friends.map(friend => <Link href={`/${friend.id}`} key={friend.id} className="bg-white rounded-lg shadow-md p-4 flex items-center flex-col gap-2">
                             <Image
-                                src="https://randomuser.me/api/portraits/men/14.jpg"
-                                alt="John Doe"
+                                src={friend.picture}
+                                alt={friend.name}
                                 width={100}
                                 height={100}
                                 className="rounded-full object-cover object-center w-[100px] h-[100px]"
