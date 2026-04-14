@@ -1,9 +1,12 @@
+import FriendCart from "@/components/FriendCart";
+import Hero from "@/components/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <h1>khela hbe</h1>
+      <Hero></Hero>
+      <FriendCart></FriendCart>
     </>
   );
 }
