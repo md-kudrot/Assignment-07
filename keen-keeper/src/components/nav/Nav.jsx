@@ -23,7 +23,7 @@ const Nav = () => {
             <div className="bg-base-100 shadow-sm ">
                 <div className="navbar  container mx-auto">
                     <div className="flex-1">
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl font-bold"> <span className='text-black '>Keen</span><span className='bg-[#07da93] -ml-3'></span>Keeper</a>
                     </div>
                     <div className="flex-none">
                         <ul className="menu menu-horizontal px-1">
