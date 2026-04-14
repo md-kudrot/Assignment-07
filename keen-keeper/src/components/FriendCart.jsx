@@ -1,16 +1,20 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
+
+
+
 
 const FriendCart = () => {
     return (
-        <div>
-            <div className="container mx-auto mt-10 md:w-[60%] ">
+        <Link href="/friends" className="bg-base-200">
+            <div className="container mx-auto mt-10 md:w-[60%] py-10 ">
                 <h2 className="text-3xl font-bold mb-4">Your Friends</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                   
                     <div className="bg-white rounded-lg shadow-md p-4 flex items-center flex-col gap-2">
                         <Image
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                            src="https://randomuser.me/api/portraits/men/14.jpg"
                             alt="John Doe"
                             width={100}
                             height={100}
@@ -24,7 +28,7 @@ const FriendCart = () => {
                 </div>
 
             </div>
-        </div>
+        </Link>
     );
 };
 
