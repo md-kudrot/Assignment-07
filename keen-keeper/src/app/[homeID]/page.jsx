@@ -1,3 +1,6 @@
+import CallBtn from '@/components/Button/CallBtn';
+import TextBtn from '@/components/Button/TextBtn';
+import VideoBtn from '@/components/Button/VideoBtn';
 import Image from 'next/image';
 import React from 'react';
 import { FiVideo } from 'react-icons/fi';
@@ -20,7 +23,12 @@ const HomeID = async ({ params }) => {
     // console.log(homeID);
 
     const friend = friends.find(friend => friend.id === parseInt(homeID));
-    console.log(friend);
+    // console.log(friend);
+
+
+
+
+
 
     return (
         <div className='bg-base-200'>
@@ -61,7 +69,7 @@ const HomeID = async ({ params }) => {
                             }
                         </div>
                     </div>
-                   <div className="flex flex-col gap-2 ">
+                    <div className="flex flex-col gap-2 ">
                         <button className="bg-white text-black py-2 px-4 rounded-lg w-full flex gap-2 items-center justify-center"> <RiNotificationSnoozeLine /> Snooze 2 weeks</button>
                         <button className="bg-white text-black py-2 px-4 rounded-lg w-full flex gap-2 items-center justify-center"> <RiArchiveLine />ArchiveArchive</button>
                         <button className="bg-white  text-red-800 py-2 px-4 rounded-lg w-full flex gap-2 items-center justify-center"> <RiDeleteBinLine />Delete</button>
@@ -102,18 +110,11 @@ const HomeID = async ({ params }) => {
                         <h1 className='py-2 text-xl font-semibold'>Quick Check-In</h1>
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 
-                            <div className="bg-gray-100 p-2 py-5 rounded-lg flex flex-col items-center text-center cursor-pointer ">
-                                <TbPhoneCalling className='font-bold text-3xl' />
-                                <p className='text-[#64748B]'>Call</p>
-                            </div>
-                            <div className="bg-gray-100 p-2 py-5 rounded-lg flex flex-col items-center text-center cursor-pointer ">
-                                <MdOutlineTextsms className='font-bold text-3xl' />
-                                <p className='text-[#64748B]'>Text</p>
-                            </div>
-                            <div className="bg-gray-100 p-2 py-5 rounded-lg flex flex-col items-center text-center cursor-pointer ">
-                                <FiVideo className='font-bold text-3xl' />
-                                <p className='text-[#64748B]'>Video</p>
-                            </div>
+                            <CallBtn data={friend} />
+
+                            <TextBtn data={friend} />
+
+                            <VideoBtn data={friend} />
 
                         </div>
                     </div>
