@@ -22,7 +22,7 @@ const HomeID = async ({ params }) => {
 
 
     const { homeID } = await params;
-    console.log(homeID);
+    // console.log(homeID);
 
     const friend = friends.find(friend => friend.id === parseInt(homeID));
     console.log(friend);
@@ -43,11 +43,6 @@ const HomeID = async ({ params }) => {
                         />
                         <h3 className="text-xl font-semibold mb-2">{friend.name}</h3>
                         <p className="text-gray-600">{friend.days_since_contact}d ago</p>
-                        <div className="flex items-center gap-2 flex-wrap justify-center ">
-                            {
-                                friend.tags.map((tag, index) => <button key={index} className="bg-[#CBFADB]  text-[#244D3F]  py-2 px-2 rounded-full text-sm">{tag}</button>)
-                            }
-                        </div>
 
                         <button
                             className={`${friend.status === 'overdue'
@@ -61,6 +56,16 @@ const HomeID = async ({ params }) => {
                         >
                             {friend.status}
                         </button>
+
+                        
+
+                        <div className="flex items-center gap-2 flex-wrap justify-center ">
+                            {
+                                friend.tags.map((tag, index) => <button key={index} className="bg-[#CBFADB]  text-[#244D3F]  py-2 px-2 rounded-full text-sm">{tag}</button>)
+                            }
+                        </div>
+
+                        
 
 
                     </div>
