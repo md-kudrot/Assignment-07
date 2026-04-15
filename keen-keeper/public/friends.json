@@ -11,9 +11,9 @@
             "close friend",
             "Dhaka"
         ],
-        "bio": "Met during freshman year at BUET. She's a civil engineer now working on infrastructure projects in Sylhet. We used to pull all-nighters before exams and now catch up over biriyani whenever she's in town.",
+        "bio": "College friend, thoughtful and dependable",
         "goal": 14,
-        "next_due_date": "2026-04-10"
+        "next_due_date": "Apr 10, 2026"
     },
     {
         "id": 2,
@@ -26,9 +26,9 @@
             "work",
             "mentor"
         ],
-        "bio": "My manager at the first startup I joined in London. Taught me more about product thinking in six months than I learned in four years of school. We still do monthly catch-ups over video call even though he's moved to Toronto.",
+        "bio": "Former manager, trusted mentor",
         "goal": 30,
-        "next_due_date": "2026-05-06"
+        "next_due_date": "May 6, 2026"
     },
     {
         "id": 3,
@@ -41,9 +41,9 @@
             "childhood",
             "close friend"
         ],
-        "bio": "Grew up two houses down from each other in Mirpur. We used to climb the guava tree in her backyard and read comics until her mom called us for lunch. She's a pediatrician now in Chittagong and somehow still finds time to send voice notes.",
+        "bio": "Childhood friend, warm and caring",
         "goal": 10,
-        "next_due_date": "2026-04-15"
+        "next_due_date": "Apr 15, 2026"
     },
     {
         "id": 4,
@@ -56,9 +56,9 @@
             "travel",
             "college"
         ],
-        "bio": "We backpacked across Southeast Asia together in 2019 — Bangkok to Hanoi on a shoestring budget. He's back in Accra running a sustainable fashion brand. I keep meaning to visit and he keeps sending me fabric samples.",
+        "bio": "Travel buddy, creative entrepreneur",
         "goal": 21,
-        "next_due_date": "2026-03-30"
+        "next_due_date": "Mar 30, 2026"
     },
     {
         "id": 5,
@@ -71,9 +71,9 @@
             "close friend",
             "creative"
         ],
-        "bio": "Met at a design conference in Singapore in 2022. She's a UX researcher based in Milan and one of the most thoughtful people I know. We swap book recommendations every few weeks and have a running list of restaurants we want to try when we're in the same city.",
+        "bio": "Design friend, insightful researcher",
         "goal": 14,
-        "next_due_date": "2026-04-20"
+        "next_due_date": "Apr 20, 2026"
     },
     {
         "id": 6,
@@ -87,9 +87,9 @@
             "Dhaka",
             "close friend"
         ],
-        "bio": "Our dads were colleagues and we basically grew up at each other's houses. He moved to Kuala Lumpur for his MBA and stayed on to work in fintech. We text a lot but actual conversations have gotten less frequent since he had his second kid.",
+        "bio": "Family friend, supportive and kind",
         "goal": 14,
-        "next_due_date": "2026-04-16"
+        "next_due_date": "Apr 16, 2026"
     },
     {
         "id": 7,
@@ -102,9 +102,9 @@
             "work",
             "tech"
         ],
-        "bio": "We collaborated on an open-source project for almost two years and became close through late-night GitHub comments and long Discord calls. She's a backend engineer at a robotics startup in Osaka. I haven't reached out since the project wound down and I genuinely miss talking to her.",
+        "bio": "Tech collaborator, brilliant engineer",
         "goal": 30,
-        "next_due_date": "2026-03-15"
+        "next_due_date": "Mar 15, 2026"
     },
     {
         "id": 8,
@@ -117,8 +117,8 @@
             "college",
             "sports"
         ],
-        "bio": "Roommates for two years during my exchange semester in Mexico City. He dragged me to every futbol match and taught me to make proper tacos al pastor. Now works as a sports journalist in Guadalajara. We still watch the same games from different countries and argue over WhatsApp.",
+        "bio": "College roommate, sports enthusiast",
         "goal": 21,
-        "next_due_date": "2026-04-29"
+        "next_due_date": "Apr 29, 2026"
     }
 ]
