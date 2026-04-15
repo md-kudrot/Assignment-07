@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { TbPhoneCalling } from 'react-icons/tb';
 import { TimeLineContext } from '@/context/timeLineContext';
+import { toast } from 'react-toastify';
 
 const CallBtn = ({ data }) => {
 
@@ -9,11 +10,25 @@ const CallBtn = ({ data }) => {
     // console.log({btnData, setBtnData})
 
     const handleCall = (callData) => {
-        console.log("Call action ", callData);
+        // console.log("Call action ", callData);
 
         const updatedCallData = { ...callData, logo: '📞' };
-        setBtnData([...btnData.filter(item => item.id !== updatedCallData.id), updatedCallData])
+
+        setBtnData([...btnData, updatedCallData])
+        toast.success("added successfully!");
+       
+        // const alreadyExists = btnData.some(item => item.id === callData.id);
+        
+        // if(alreadyExists){
+        //     toast.error("already in timeline!");
+        // }else{
+        //     setBtnData([...btnData, updatedCallData]);
+        //     toast.success("added successfully!");
+        // }
     };
+
+    
+
     console.log(btnData);
     return (
         <div>

@@ -4,6 +4,7 @@ import Nav from "@/components/nav/Nav";
 import Footer from "@/components/Footer";
 import TimeLineProvider from "@/context/timeLineContext";
 import Providers from "./lib/provider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,11 @@ export default function RootLayout({ children }) {
         <Providers>
           <Nav></Nav>
           {children}
+          <ToastContainer
+            position="top-center"
+            autoClose={2000}
+            
+          />
           <Footer></Footer>
         </Providers>
       </body>

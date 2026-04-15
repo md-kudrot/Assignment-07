@@ -2,6 +2,7 @@
 import { TimeLineContext } from '@/context/timeLineContext';
 import React, { useContext } from 'react';
 import { MdOutlineTextsms } from 'react-icons/md';
+import { toast } from 'react-toastify';
 
 const TextBtn = ({ data }) => {
 
@@ -12,7 +13,18 @@ const TextBtn = ({ data }) => {
         console.log("Text action ", textData);
 
         const updatedTextData = { ...textData, logo: '💬' };
-        setBtnData([...btnData.filter(item => item.id !== updatedTextData.id), updatedTextData])
+        
+        setBtnData([...btnData, updatedTextData])
+        toast.success("added successfully!");
+
+        // const alreadyExists = btnData.some(item => item.id === updatedTextData.id);
+
+        // if (alreadyExists) {
+        //     toast.error("already in timeline!");
+        // } else {
+        //     setBtnData([...btnData, updatedTextData]);
+        //     toast.success("added successfully!");
+        // }
     };
     // console.log(btnData);
 

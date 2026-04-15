@@ -2,6 +2,7 @@
 import { TimeLineContext } from '@/context/timeLineContext';
 import React, { useContext } from 'react';
 import { FiVideo } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 
 const VideoBtn = ({ data }) => {
     const { btnData, setBtnData } = useContext(TimeLineContext);
@@ -9,7 +10,18 @@ const VideoBtn = ({ data }) => {
         console.log("Video action ", videoData);
 
         const updatedVideoData = { ...videoData, logo: '📹' };
-        setBtnData([...btnData.filter(item => item.id !== updatedVideoData.id), updatedVideoData])
+
+        setBtnData([...btnData, updatedVideoData])
+        toast.success("added successfully!");
+
+        // const alreadyExists = btnData.some(item => item.id === updatedVideoData.id);
+
+        // if (alreadyExists) {
+        //     toast.error("already in timeline!");
+        // } else {
+        //     setBtnData([...btnData, updatedVideoData]);
+        //     toast.success("added successfully!");
+        // }
     };
     // console.log(btnData);
 

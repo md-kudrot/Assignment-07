@@ -8,10 +8,10 @@ const Footer = () => {
     return (
 
         <div className="hero bg-[#244D3F] pt-10 md:pt-15">
-            <div className="hero-content w-full flex flex-col text-center py-12 md:py-20 text-white">
+            <div className="hero-content w-full flex flex-col text-center  text-white">
                 <div className="">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">KeenKeeper</h1>
-                    <p className="py-6 text-[#d6cece]">
+                    <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold">KeenKeeper</h1>
+                    <p className="py-4 text-[#d6cece]">
                         Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
                     </p>
                     <div className="">
