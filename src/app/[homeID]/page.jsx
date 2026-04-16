@@ -37,20 +37,20 @@ const HomeID = async ({ params }) => {
             <div className="container w-full md:w-[90%] lg:w-[60%] mx-auto py-10 flex flex-col md:flex-row gap-4 p-4">
 
                 <div className="w-full md:w-[30%] flex gap-3 flex-col">
-                    <div key={friend.id} className="bg-white w-full rounded-lg shadow-md py-4
+                    <div key={friend?.id} className="bg-white w-full rounded-lg shadow-md py-4
                      flex items-center flex-col gap-2">
                         <Image
-                            src={friend.picture}
-                            alt={friend.name}
+                            src={friend?.picture}
+                            alt={friend?.name}
                             width={100}
                             height={100}
                             className="rounded-full object-cover object-center w-[100px] h-[100px]"
                         />
-                        <h3 className="text-xl font-semibold mb-2">{friend.name}</h3>
-                        <p className="text-gray-600">{friend.days_since_contact}d ago</p>
+                        <h3 className="text-xl font-semibold mb-2">{friend?.name}</h3>
+                        <p className="text-gray-600">{friend?.days_since_contact}d ago</p>
 
                         <button
-                            className={`${friend.status === 'overdue'
+                            className={`${friend?.status === 'overdue'
                                 ? 'bg-[#EF4444]'
                                 : friend.status === "almost due"
                                     ? 'bg-[#EFAD44]'
@@ -62,8 +62,8 @@ const HomeID = async ({ params }) => {
                             {friend.status}
                         </button>
 
-                        <p className='text-[#64748B] text-center'>{friend.bio}</p>
-                        <p className='text-[#64748B] text-center'>Preferred : {friend.email}</p>
+                        <p className='text-[#64748B] text-center'>{friend?.bio}</p>
+                        <p className='text-[#64748B] text-center'>Preferred : {friend?.email}</p>
 
                         <div className="flex items-center gap-2 flex-wrap justify-center">
                             {
@@ -83,15 +83,15 @@ const HomeID = async ({ params }) => {
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3  gap-4">
 
                             <div className="bg-white p-2 py-10 rounded-lg flex flex-col items-center text-center">
-                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend.days_since_contact}</h1>
+                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend?.days_since_contact}</h1>
                                 <p className='text-[#64748B]'>Days Since Contact</p>
                             </div>
                             <div className="bg-white p-2 py-10 rounded-lg flex flex-col items-center text-center">
-                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend.goal}</h1>
+                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend?.goal}</h1>
                                 <p className='text-[#64748B]'>Goal (Days)</p>
                             </div>
                             <div className="bg-white p-2 py-10 rounded-lg flex flex-col items-center text-center">
-                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend.next_due_date}</h1>
+                                <h1 className='text-[#244D3F] text-2xl font-bold'>{friend?.next_due_date}</h1>
                                 <p className='text-[#64748B]'>Next Due</p>
                             </div>
 
@@ -104,7 +104,7 @@ const HomeID = async ({ params }) => {
                                 <h1 className='text-[#244D3F] text-xl font-bold'>Relationship Goal</h1>
                                 <button className='btn'>Edit</button>
                             </div>
-                            <p className='text-gray-600 mt-2'>contact every <b>{friend.days_since_contact} days</b> </p>
+                            <p className='text-gray-600 mt-2'>contact every <b>{friend?.days_since_contact} days</b> </p>
                         </div>
                     </div>
 
