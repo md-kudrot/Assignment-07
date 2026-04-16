@@ -24,6 +24,8 @@ const HomeID = async ({ params }) => {
 
     const friends = await friendsPromise();
 
+    console.log(friends)
+
     const { homeID } = await params;
     // console.log(homeID);
 
