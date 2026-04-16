@@ -52,14 +52,14 @@ const HomeID = async ({ params }) => {
                         <button
                             className={`${friend?.status === 'overdue'
                                 ? 'bg-[#EF4444]'
-                                : friend.status === "almost due"
+                                : friend?.status === "almost due"
                                     ? 'bg-[#EFAD44]'
-                                    : friend.status === 'on-track'
+                                    : friend?.status === 'on-track'
                                         ? 'bg-[#244D3F]'
                                         : ""
                                 } text-white py-2 px-2 rounded-full text-sm`}
                         >
-                            {friend.status}
+                            {friend?.status}
                         </button>
 
                         <p className='text-[#64748B] text-center'>{friend?.bio}</p>
