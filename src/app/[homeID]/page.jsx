@@ -1,6 +1,7 @@
 import CallBtn from '@/components/Button/CallBtn';
 import TextBtn from '@/components/Button/TextBtn';
 import VideoBtn from '@/components/Button/VideoBtn';
+import { getJsonData } from '@/liabary/loaddata';
 import Image from 'next/image';
 import React from 'react';
 import { FiVideo } from 'react-icons/fi';
@@ -10,14 +11,14 @@ import { RiArchiveLine } from "react-icons/ri";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbPhoneCalling } from 'react-icons/tb';
 
-const friendsPromise = async () => {
-    const res = await fetch("http://localhost:3000//friends.json");
-    const data = await res.json();
-    return data;
-}
+// const friendsPromise = async () => {
+//     const res = await fetch("https://assignment-7-nine-beryl.vercel.app//friends.json");
+//     const data = await res.json();
+//     return data;
+// }
 
 const HomeID = async ({ params }) => {
-    const friends = await friendsPromise();
+    const friends = getJsonData();
 
     const { homeID } = await params;
     // console.log(homeID);

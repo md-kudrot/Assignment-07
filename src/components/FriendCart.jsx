@@ -1,18 +1,19 @@
+import { getJsonData } from '@/liabary/loaddata';
 import Image from 'next/image';
 import Link from 'next/link';
 
 
 
-const FriendCart =async () => {
+const FriendCart = async () => {
 
-    const friendsPromise = async () => {
-        const res = await fetch("http://localhost:3000/friends.json");
-        const data = await res.json();
-        return data;
-    }
+    // const friendsPromise = async () => {
+    //     const res = await fetch("https://assignment-7-nine-beryl.vercel.app/friends.json");
+    //     const data = await res.json();
+    //     return data;
+    // }
 
 
-    const friends = await friendsPromise();
+    const friends = getJsonData();
     console.log(friends);
 
     // const friends = [
