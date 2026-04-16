@@ -6,7 +6,7 @@ import Link from 'next/link';
 const FriendCart = async () => {
 
     const friendsPromise = async () => {
-        const res = await fetch("https://keen-keeper-peach.vercel.app/friends.json", {
+        const res = await fetch("https://assignment-07-seven.vercel.app/friends.json", {
             cache: "no-store"
         });
         const data = await res.json();
