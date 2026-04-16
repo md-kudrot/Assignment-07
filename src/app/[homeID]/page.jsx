@@ -10,15 +10,18 @@ import { RiArchiveLine } from "react-icons/ri";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbPhoneCalling } from 'react-icons/tb';
 
-const friendsPromise = async () => {
-    const res = await fetch("https://assignment-07-seven.vercel.app/friends.json",{
-        cache: "no-store"
-    });
-    const data = await res.json();
-    return data;
-}
 
 const HomeID = async ({ params }) => {
+
+    const friendsPromise = async () => {
+        const res = await fetch("https://assignment-07-seven.vercel.app/friends.json", {
+            cache: "no-store"
+        });
+        const data = await res.json();
+        return data;
+    }
+
+
     const friends = await friendsPromise();
 
     const { homeID } = await params;
