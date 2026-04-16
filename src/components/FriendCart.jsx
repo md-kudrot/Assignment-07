@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 
 
-const FriendCart =async () => {
+const FriendCart = async () => {
 
     const friendsPromise = async () => {
-        const res = await fetch("http://localhost:3000/friends.json");
+        const res = await fetch("https://keen-keeper-peach.vercel.app/friends.json");
         const data = await res.json();
         return data;
     }
