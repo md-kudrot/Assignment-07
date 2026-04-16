@@ -67,7 +67,7 @@ const HomeID = async ({ params }) => {
 
                         <div className="flex items-center gap-2 flex-wrap justify-center">
                             {
-                                friend.tags.map((tag, index) => <button key={index} className="bg-[#CBFADB] text-[#244D3F] py-2 px-2 rounded-full text-sm">{tag}</button>)
+                                friend?.tags.map((tag, index) => <button key={index} className="bg-[#CBFADB] text-[#244D3F] py-2 px-2 rounded-full text-sm">{tag}</button>)
                             }
                         </div>
                     </div>
