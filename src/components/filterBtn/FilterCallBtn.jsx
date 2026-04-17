@@ -19,9 +19,9 @@ const FilterCallBtn = () => {
     }
     // console.log(callBtnData);
     return (
-        <div>
+   
             <li onClick={() => handleCallFilter()}><a>Call</a></li>
-        </div>
+      
     );
 };
 

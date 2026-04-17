@@ -18,9 +18,9 @@ const VideoBtn = () => {
     }
     // console.log(videoBtnData);
     return (
-        <div>
-            <li onClick={() => handleVideoFilter()}><a>Video</a></li>
-        </div>
+
+        <li onClick={() => handleVideoFilter()}><a>Video</a></li>
+
     );
 };
 

@@ -19,9 +19,9 @@ const MessageBtn = () => {
     }
     // console.log(smsBtnData);
     return (
-        <div>
+   
             <li onClick={() => handleMessageFilter()}><a>Message</a></li>
-        </div>
+        
     );
 };
 

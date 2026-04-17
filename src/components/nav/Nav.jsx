@@ -23,7 +23,7 @@ const Nav = () => {
             <div className="navbar container mx-auto flex-col md:flex-row gap-2 md:gap-0">
                 <div className="flex-1 w-full md:w-auto justify-center md:justify-start">
                     <a className="btn btn-ghost text-xl font-bold">
-                        <span className='text-black '>Keen</span><span className='bg-[#07da93] -ml-3'></span>Keeper
+                        <span className='text-black '>Keen</span><span className='text-[#244D3F] -ml-2'>Keeper</span>
                     </a>
                 </div>
                 <div className="flex-none w-full md:w-auto justify-center md:justify-end">
