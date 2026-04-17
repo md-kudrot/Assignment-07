@@ -11,7 +11,6 @@ import { RiArchiveLine } from "react-icons/ri";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TbPhoneCalling } from 'react-icons/tb';
 
-<<<<<<< HEAD
 // const friendsPromise = async () => {
 //     const res = await fetch("https://assignment-7-nine-beryl.vercel.app//friends.json");
 //     const data = await res.json();
@@ -19,29 +18,18 @@ import { TbPhoneCalling } from 'react-icons/tb';
 // }
 
 const HomeID = async ({ params }) => {
-    const friends = getJsonData();
-=======
-
-const HomeID = async ({ params }) => {
-
-    const friendsPromise = async () => {
-        const res = await fetch("https://assignment-07-seven.vercel.app/friends.json", {
-            cache: "no-store"
-        });
-        const data = await res.json();
-        return data;
-    }
-
-
-    const friends = await friendsPromise();
->>>>>>> 577ebdf9382afd25a3d88ac98246a2142dabebaf
-
-    console.log(friends)
-
     const { homeID } = await params;
-    // console.log(homeID);
+    // const friends = getJsonData();
 
-    const friend = friends.find(friend => friend.id === parseInt(homeID));
+    // console.log(friends)
+
+    // console.log(homeID);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/friends.json`, {
+        cache: "no-store"
+    });
+    const friends = await res.json()
+
+    const friend = friends?.find(friend => friend?.id == homeID);
     // console.log(friend);
 
 

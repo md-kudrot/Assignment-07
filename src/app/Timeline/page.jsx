@@ -4,10 +4,11 @@ import FilterVideoBtn from '@/components/filterBtn/FilterVideoBtn';
 import FilterMessageBtn from '@/components/filterBtn/FilterMessageBtn';
 import { TimeLineContext } from '@/context/timeLineContext';
 import React, { useContext } from 'react';
+import AllFilterButton from '@/components/filterBtn/AllFilterButton';
 
 const Timeline = () => {
     const { btnData, sortType } = useContext(TimeLineContext);
-    console.log("this is sort type", sortType);
+    // console.log("this is sort type", sortType);
 
     let filteredData = btnData;
 
@@ -17,9 +18,12 @@ const Timeline = () => {
         filteredData = btnData.filter(item => item.logo === '📹');
     } else if (sortType === "message") {
         filteredData = btnData.filter(item => item.logo === '💬');
+    } else if (sortType === "all") {
+        filteredData = btnData;
     }
 
-    console.log("Timeline", filteredData);
+    // console.log("Timeline", filteredData);
+    // console.log("btnData length", btnData.length);
     return (
         <div className='bg-base-200'>
             <div className="container mx-auto w-[60%] py-10  h-screen flex flex-col">
@@ -27,9 +31,12 @@ const Timeline = () => {
                 <div className="dropdown dropdown-start">
                     <div tabIndex={0} role="button" className="btn ">Filter timeline ⬇️</div>
                     <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                      <FilterCallBtn></FilterCallBtn>
-                      <FilterVideoBtn></FilterVideoBtn>
-                      <FilterMessageBtn></FilterMessageBtn>
+
+                        <AllFilterButton></AllFilterButton>
+                        <FilterCallBtn></FilterCallBtn>
+                        <FilterVideoBtn></FilterVideoBtn>
+                        <FilterMessageBtn></FilterMessageBtn>
+
                     </ul>
                 </div>
                 <div className="flex flex-col gap-4 mt-4 overflow-y-auto flex-1  pr-2">
@@ -43,9 +50,22 @@ const Timeline = () => {
                         </div>))
                     }
 
+                    {
+                        btnData.length === 0 && <div className='mx-auto mt-6 flex w-full max-w-md flex-col items-center justify-center rounded-2xl border border-dashed border-[#CBD5E1] bg-[#F8FAFC] px-6 py-12 text-center shadow-sm'>
+                            <div className='mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#CBFADB] text-xl'>
+                                ⏳
+                            </div>
+                            <p className='text-lg font-semibold text-[#0F172A]'>No timeline data available.</p>
+                            <p className='mt-2 text-sm text-[#64748B]'>Add a friend interaction to see calls, video chats, and messages here.</p>
+                        </div>
+                    }
+
 
                 </div>
             </div>
+
+
+
         </div>
     );
 };

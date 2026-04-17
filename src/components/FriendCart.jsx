@@ -6,25 +6,17 @@ import Link from 'next/link';
 
 const FriendCart = async () => {
 
-<<<<<<< HEAD
     // const friendsPromise = async () => {
-    //     const res = await fetch("https://assignment-7-nine-beryl.vercel.app/friends.json");
+    //     const res = await fetch("https://assignment-07-seven.vercel.app/friends.json", {
+    //         cache: "no-store"
+    //     });
     //     const data = await res.json();
     //     return data;
     // }
-=======
-    const friendsPromise = async () => {
-        const res = await fetch("https://assignment-07-seven.vercel.app/friends.json", {
-            cache: "no-store"
-        });
-        const data = await res.json();
-        return data;
-    }
->>>>>>> 577ebdf9382afd25a3d88ac98246a2142dabebaf
 
 
     const friends = getJsonData();
-    console.log(friends);
+    // console.log(friends);
 
     // const friends = [
     //     {
