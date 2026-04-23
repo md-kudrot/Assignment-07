@@ -1,4 +1,4 @@
-import FriendCart from "@/components/FriendCart";
+import FriendCart from "@/app/friendCart/page";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 
