@@ -2,6 +2,12 @@
 
 KeenKeeper is a relationship tracker built with Next.js. It helps you keep track of friends, see who needs attention, and log interactions through a clean dashboard, timeline, and analytics view.
 
+
+<img width="1315" height="899" alt="image" src="https://github.com/user-attachments/assets/c696737f-d84c-4764-8900-9c39466cf532" />
+
+
+
+
 ## Technologies Used
 
 - Next.js 16
